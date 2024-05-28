@@ -1,5 +1,5 @@
 # Hurricane-Tracker
-Identify the path of previous hurricanes utilizing Python.
+This Python project visualizes hurricane paths on a map using Turtle graphics, allowing users to input a storm name and displaying the hurricane's path and category based on wind speed. The code demonstrates proficiency in data manipulation, visualization, and user interaction.
 
 # Project Structure
 The project consists of the following files:
