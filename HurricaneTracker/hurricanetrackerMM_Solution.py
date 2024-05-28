@@ -10,7 +10,6 @@ def graphical_setup():
 
        :return: a tuple containing the Turtle and the Screen
 
-       DO NOT CHANGE THE CODE IN THIS FUNCTION!
     """
 
     import tkinter
@@ -51,7 +50,7 @@ def track_storm(hurricane_data):
     t.goto(float(hurricane_data[0].split(',')[3]), float(hurricane_data[0].split(',')[2]))
     t.pendown()
 
-    # your code to animate storm here
+    
     #Category winds speeds were estimated from: https://www.nola.com/news/hurricane/category-4-hurricane-winds-can-rip-off-roofs-this-video-explains-how/article_2491bc82-081f-11ec-88fb-7b39be0fddea.html . Accessed on 12/2/2022.
     for h in hurricane_data:
         h = h.split(',')
@@ -80,16 +79,11 @@ def track_storm(hurricane_data):
             t.color('White')
             t.width(1)
 
-    # your code above this
-    # without the final call to wn.exitonclick() in main,
-    # the background image will not be displayed
-    # also need to return map_bg_img so that it is not garbage collected
     return t, wn, map_bg_img
 
 
 def main():
 
-    # your code here
     (t, wn, map_bg_img) = graphical_setup()
     hurricane_input=('data\\')+input(f'Enter Storm Name:')+('.csv')
     hurricane_data = glob.glob('data/*')
@@ -131,12 +125,7 @@ def main():
         print('Invalid Storm Name.')
         exit(0)
     wn.exitonclick()
-    # also you'll need to fix the call below so that it calls
-    # the track_storm function
-    # wn, map_bg_img = track_storm(...)
-
-    # the line below needs to be the last line of main()
-    # you'll need to get the wn from track_storm
+  
 
 if __name__ == "__main__":
     main()
